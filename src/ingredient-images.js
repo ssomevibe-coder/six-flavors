@@ -1,0 +1,20 @@
+import img0 from './assets/ingredients/jellyfish-1.png';
+import img1 from './assets/ingredients/jellyfish-2.jpg';
+import img2 from './assets/ingredients/jellyfish-3.jpg';
+import img3 from './assets/ingredients/vegetable-tea-1.png';
+import img4 from './assets/ingredients/vegetable-tea-2.jpg';
+import img5 from './assets/ingredients/vegetable-tea-3.jpg';
+import img6 from './assets/ingredients/pepper-pork-1.jpg';
+import img7 from './assets/ingredients/pepper-pork-2.jpg';
+import img8 from './assets/ingredients/pepper-pork-3.jpg';
+import img9 from './assets/ingredients/pumpkin-pasta-1.jpg';
+import img10 from './assets/ingredients/pumpkin-pasta-2.jpg';
+import img11 from './assets/ingredients/pumpkin-pasta-3.jpg';
+import img12 from './assets/ingredients/lemon-tea-1.jpg';
+import img13 from './assets/ingredients/lemon-tea-2.jpg';
+import img14 from './assets/ingredients/lemon-tea-3.jpg';
+import img15 from './assets/ingredients/chocolate-cake-1.jpg';
+import img16 from './assets/ingredients/chocolate-cake-2.jpg';
+import img17 from './assets/ingredients/chocolate-cake-3.jpg';
+export const ingredientImages = {'jellyfish': [img0,img1,img2],'vegetable-tea': [img3,img4,img5],'pepper-pork': [img6,img7,img8],'pumpkin-pasta': [img9,img10,img11],'lemon-tea': [img12,img13,img14],'chocolate-cake': [img15,img16,img17]};
+
