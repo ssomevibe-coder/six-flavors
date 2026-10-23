@@ -8,12 +8,12 @@ import { heroImages } from './hero-images.js';
 
 function Page({ level, title, back, children, isMenu = false, subtitle }) {
   const heading = useRef(null);
-  useEffect(() => { document.title = `${title} · 六味之绪`; heading.current?.focus(); window.scrollTo(0, 0); }, [title]);
-  return <section className={`page${isMenu ? ' illustrated-menu' : ''}`}><header><Link to={back || '/'} aria-label={back ? '返回上一级' : '返回首页'}>←</Link><span>六味之绪</span><small>{isMenu ? '01 — 06' : ''}</small></header><div className="page-heading"><small>A TABLE OF LITTLE JOYS</small><h1 ref={heading} tabIndex={-1}>{title}{isMenu && <span className="heading-flower" aria-hidden="true">✳</span>}</h1><p className="muted">{isMenu ? '一席六味，慢慢品尝。' : subtitle}</p></div>{children}</section>;
+  useEffect(() => { document.title = `${title} · 六绪之味`; heading.current?.focus(); window.scrollTo(0, 0); }, [title]);
+  return <section className={`page${isMenu ? ' illustrated-menu' : ''}`}><header><Link to={back || '/'} aria-label={back ? '返回上一级' : '返回首页'}>←</Link><span>六绪之味</span><small>{isMenu ? '01 — 06' : ''}</small></header><div className="page-heading"><small>A TABLE OF LITTLE JOYS</small><h1 ref={heading} tabIndex={-1}>{title}{isMenu && <span className="heading-flower" aria-hidden="true">✳</span>}</h1><p className="muted">{isMenu ? '一席六味，慢慢品尝。' : subtitle}</p></div>{children}</section>;
 }
 function HomePage() {
-  useEffect(() => { document.title = '六味之绪'; }, []);
-  return <section className="cover"><div className="topline"><span>A LITTLE TASTE OF LIFE</span></div><div><p className="intro">从物理滋养到精神复苏——<br/><span>一场关于「喜、怒、哀、惧、思、欲」的美食沙龙</span></p><h1>六味之绪</h1><Link className="start" to="/menu">START <span>⟶</span></Link><div className="cover-mark" aria-hidden="true">✳</div></div><footer>SIX FLAVORS, SIX FEELINGS</footer></section>;
+  useEffect(() => { document.title = '六绪之味'; }, []);
+  return <section className="cover"><div className="topline"><span>A LITTLE TASTE OF LIFE</span></div><div><p className="intro">从物理滋养到精神复苏——<br/><span>一场关于「喜、怒、哀、惧、思、欲」的美食沙龙</span></p><h1>六绪之味</h1><Link className="start" to="/menu">START <span>⟶</span></Link></div><footer>SIX FLAVORS, SIX FEELINGS</footer></section>;
 }
 function MenuPage() {
   return <Page level="L2" title="今日食单" back="/" isMenu><div className="menu-grid">{dishes.map((dish, i) => <Link className="dish" to={`/dish/${dish.id}`} key={dish.id} aria-label={`${dish.category} ${dish.name}，查看详情`}><img className="dish-artwork" src={dishArtwork[dish.id]} alt="" width="180" height="150"/><small>{String(i + 1).padStart(2, '0')} / {dish.category}</small><h2>{dish.name}</h2></Link>)}</div><footer className="menu-footer">— 好好吃饭，尽情生活 —<span aria-hidden="true">✳</span></footer></Page>;
